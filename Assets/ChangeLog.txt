@@ -1,0 +1,52 @@
+------------------------------------
+0.05b330
+------------------------------------
+[Feature]		Create new minimap window (Window/ABMinimap/Create new minimap)
+[Feature]		Dynamic RenderTexture script for cameras, no need to create RenderTexture assets and assign them anymore
+[Improvement]	Updated to Unity 4.6 RC1 (there are code changes for this, won't work in previous betas). This also fixed the Web Player build and no more lost references.
+[Improvement]	Code cleanup, removing TODOs a minor optimizations
+[Improvement]	Added simple FPS benchmarking
+[Fix]			Encountered Unity UI performance problem with applying rotations. Performance drops when using rotating minimap. Improved the code to at least do this as little as possible. Waiting for Unity to fix this issue.
+[Fix]			Minor fixes
+------------------------------------
+0.04b291
+------------------------------------
+[Feature]		ABMinimap settings window (Window/ABMinimap/Settings)
+[Feature]		You can now run map updates in Update, FixedUpdate, LateUpdate or custom CustomUpdate with any target framerate
+[Improvement]	Global update setting allows you to run the minimap in any target framerate. Any MMapBase-inherited script can also define an override to run as often as necessary.
+[Improvement]	Code optimization and cleanup
+[Improvement]	Events are now part of the event system and can be put on any object as you wish
+[Improvement]	Extended the event system to suport OnEnter, OnExit, dragging and other input options
+[Fix]			Minor fixes
+------------------------------------
+0.03b243
+------------------------------------
+[Feature]		Ability to take a map snapshot in any meaningful resolution that can be used for the map background in the rasterized minimap
+[Improvement]	More scripts now run in the edit mode so you can see the outcome directly in the editor without running the game. Can now also be disabled in menu through Window/ABMinimap.
+[Improvement]	Improved the example scenes and added descriptions
+[Improvement]	RT camera can be part of the minimap hierarchy (hardcoded rotation and position)
+[Fix]			Fixed arrow not being displayed in the same distance on different zoom values
+[Fix]			Changed the way YZ orientation angles were calculated
+------------------------------------
+0.02b203
+------------------------------------
+[Feature]		Map works in YZ orientation
+[Feature]		Map is interactable (currently only on PointerUp is implemented)
+[Feature]		Map can rotate according the forward vector of the followed actor
+[Improvement]	Allows for combining multiple views and models under one controller. Current examples are using combinations of Raster (drawing grid and objects) and RT (drawing scene) under one controller.
+[Improvement]	Disabling objects according to the mask, transition can be animated
+[Improvement]	New editor scripts on most components. Zoom can be adjusted using a slider
+[Improvement]	Raster and RT views run in edit mode to give some immediate feedback
+[Improvement]	Raster has an editor tool to determine the map size
+[Improvement]	Works with the world space canvas
+[Improvement]	Supports varius map objects, not just pins. CircleMark and Arrow are now implemented
+[Improvement]	Zoom values are unified on Raster and RT views
+[Improvement]	MObjects now can have "depth" and are sorted automatically to make sure they are rendered as intended
+[Fix]			Bunch of fixes from the old version
+------------------------------------
+0.01b63 - The initial release
+------------------------------------
+[Feature]		Displays a minimap that can be scaled and positioned within a screen space canvas
+[Feature]		Positions and rotates pins within the map
+[Feature]		Supports smooth zooming
+[Feature]		Uses Image Mask to cut out the desired area
